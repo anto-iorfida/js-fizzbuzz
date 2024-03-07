@@ -50,7 +50,7 @@ for(let i = 1; i <= 100; i++) {
     
 }  
 
-// voglio creare un bottone dove toglie tutti gli elementi a i numeri multipli sia di 3 che di 5
+// voglio creare un bottone dove toglie tutti gli elementi a i numeri multipli sia di 3 che di 5----------------------------------------------------------------------------------
 const multipleFiveAndThree = document.querySelector('#btn-m-5-3');
 
 multipleFiveAndThree.addEventListener('click', function() {
@@ -100,7 +100,14 @@ multipleFive.addEventListener('click', function() {
     }
 });
 
-// creo bottone per far sparire tutto e far riapparire
+// bottore per trollare
+const troll = document.querySelector('#btn-m')
+troll.addEventListener('click' , function() {
+    alert('SCHERZAVO NON SONO UN MAGO 😂 ')
+
+})
+
+// creo bottone per far sparire tutto e far riapparire-----------------------------------------------------------------------------------------------------------------------------
 // 1 metodo 
     // const canc = document.querySelector('#udini')
     // canc.addEventListener('click', function () {
