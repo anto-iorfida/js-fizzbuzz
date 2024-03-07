@@ -46,16 +46,60 @@ for(let i = 1; i <= 100; i++) {
     numbContainer.innerHTML += newBox;
 
     
-    // voglio creare un bottone dove toglie tutti gli elementi a i numeri multipli sia di 3 che di 5
-    const multipleFiveAndThree = document.querySelector('#btn-m-5-3');
-
-    multipleFiveAndThree.addEventListener('click', function() {
-    const boxes = document.querySelectorAll('.m-3-5');
-    console.log(boxes, 'expreriment')
-    boxes.innerHTML = ''
-    });
+    
     
 }  
+
+// voglio creare un bottone dove toglie tutti gli elementi a i numeri multipli sia di 3 che di 5
+const multipleFiveAndThree = document.querySelector('#btn-m-5-3');
+
+multipleFiveAndThree.addEventListener('click', function() {
+    const multipleFiveAndThree = document.querySelectorAll('.m-3-5');
+
+    for (let i = 0; i < multipleFiveAndThree.length; i++) {
+        // Aggiungo o rimuovo la classe 'opaciti' ad ogni click
+        multipleFiveAndThree[i].classList.toggle('opaciti');
+    }
+});
+
+
+// voglio creare un bottone dove toglie tutti gli elementi a i numeri multipli di 3
+
+// metodo 1
+// const multipleThree = document.querySelector('#btn-m-3');
+
+// multipleThree.addEventListener('click', function() {
+// const multipleThree = document.querySelectorAll('.m-3');
+// console.log(multipleThree, 'expreriment')
+// for (i =0; i < multipleThree.length; i++){
+//     multipleThree[i].innerHTML = '';
+// }
+// });
+
+// metodo 2
+const multipleThree = document.querySelector('#btn-m-3');
+
+multipleThree.addEventListener('click', function() {
+    const multipleThree = document.querySelectorAll('.m-3');
+
+    for (let i = 0; i < multipleThree.length; i++) {
+        // Aggiungo o rimuovo la classe 'opaciti' ad ogni click
+        multipleThree[i].classList.toggle('opaciti');
+    }
+});
+
+// voglio creare un bottone dove toglie tutti gli elementi a i numeri multipli di 5
+const multipleFive = document.querySelector('#btn-m-5');
+
+multipleFive.addEventListener('click', function() {
+    const multipleFive = document.querySelectorAll('.m-5');
+
+    for (let i = 0; i < multipleFive.length; i++) {
+        // Aggiungo o rimuovo la classe 'opaciti' ad ogni click
+        multipleFive[i].classList.toggle('opaciti');
+    }
+});
+
 // creo bottone per far sparire tutto e far riapparire
 // 1 metodo 
     // const canc = document.querySelector('#udini')
@@ -65,7 +109,19 @@ for(let i = 1; i <= 100; i++) {
 
     // })
 
+// 2 metoto che al riclick compare di nuovo utilizzando if
+    // const canc = document.querySelector('#udini');
+    // let isHidden = true;
 
+    // canc.addEventListener('click', function () {
+    // const numbContainer = document.querySelector('.numbers-container');
+    // if (isHidden) {
+    //     numbContainer.classList.remove('none');
+    // } else {
+    //     numbContainer.classList.add('none');
+    // }
+    // isHidden = !isHidden; // Inverti lo stato
+    // });
 
 // 3 metodo utilizzando toggle che anche lui usa il riclick
     const canc = document.querySelector('#udini');

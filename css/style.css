@@ -44,6 +44,9 @@ h1{
 .none{
     display: none;
 }
+.opaciti{
+    opacity: 0;
+}
 
 .btn{
     padding: 10px;
