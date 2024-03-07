@@ -4,7 +4,7 @@
 
 
 // selezionare il contenitore dove mettere il box
-const numbContainer = document.querySelector('#numbers-container');
+const numbContainer = document.querySelector('.numbers-container');
 
 // creare un ciclo for dove crei 100 box
 for(let i = 1; i <= 100; i++) {
@@ -15,7 +15,7 @@ for(let i = 1; i <= 100; i++) {
 
     // creare condizione
     // se un numero è divisibile sia per 5 che per 3 allora scrivere 'fizzbuzz' e bg colorato
-    if(i % 5 === 0 && i % 3 === 0) {
+    if(i % 5 === 0 & i % 3 === 0) {
 
         bgEventMultiple = 'm-3-5';
         resulMultiple = 'FizzBuzz'
@@ -46,4 +46,31 @@ for(let i = 1; i <= 100; i++) {
     numbContainer.innerHTML += newBox;
 
     
-}
+    // voglio creare un bottone dove toglie tutti gli elementi a i numeri multipli sia di 3 che di 5
+    const multipleFiveAndThree = document.querySelector('#btn-m-5-3');
+
+    multipleFiveAndThree.addEventListener('click', function() {
+    const boxes = document.querySelectorAll('.m-3-5');
+    console.log(boxes, 'expreriment')
+    boxes.innerHTML = ''
+    });
+    
+}  
+// creo bottone per far sparire tutto e far riapparire
+// 1 metodo 
+    // const canc = document.querySelector('#udini')
+    // canc.addEventListener('click', function () {
+    //     const numbContainer = document.querySelector('.numbers-container');
+    //     numbContainer.classList.remove('none');
+
+    // })
+
+
+
+// 3 metodo utilizzando toggle che anche lui usa il riclick
+    const canc = document.querySelector('#udini');
+
+    canc.addEventListener('click', function () {
+    const numbContainer = document.querySelector('.numbers-container');
+    numbContainer.classList.toggle('none');
+    });
